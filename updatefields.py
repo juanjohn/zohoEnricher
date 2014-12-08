@@ -1,0 +1,16 @@
+
+import urllib
+import urllib2
+
+auth_token='b2392a9cbe5999c67bf70e3619332b6f'
+lead_id='1337722000000077001'
+xml_data="<Leads><row no=\"1\"><FL val=\"Lead Source\">ownload</FL><FL val=\"Last Name\">apellido</FL><FL val=\"Email\">testing@testing.com</FL><FL val=\"Title\">Manager</FL><FL val=\"Phone\">1234567890</FL><FL val=\"Home Phone\">0987654321</FL><FL val=\"Other Phone\">1212211212</FL><FL val=\"Fax\">02927272626</FL><FL val=\"Mobile\">292827622</FL></row></Leads>"
+parameters = {'authtoken':auth_token,'scope':'crmapi','xmlData':xml_data,'id':lead_id}
+final_url='https://crm.zoho.com/crm/private/xml/Leads/updateRecords'
+data=urllib.urlencode(parameters)
+request=urllib2.Request(final_url,data)
+response = urllib2.urlopen(request)
+xml_response = response.read()
+
+print xml_response
+
