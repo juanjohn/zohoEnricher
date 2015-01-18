@@ -4,7 +4,7 @@ import urllib
 import urllib2
 import re
 
-vibe_api_key="b9c2b1fe746feec13382fda8b4505acc"
+vibe_api_key=""
 lead="juanjhn@gmail.com"
 
 vibe_request_url="https://vibeapp.co/api/v1/initial_data/?api_key="+vibe_api_key+"&email="+lead
