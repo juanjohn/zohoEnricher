@@ -5,7 +5,7 @@ import urllib2
 import re
 
 module_name = 'Leads'
-authtoken = 'b2392a9cbe5999c67bf70e3619332b6f'
+authtoken = ''
 params = {'authtoken':authtoken,'scope':'crmapi','newFormat':'2'}
 final_URL = "https://crm.zoho.com/crm/private/xml/"+module_name+"/getRecords"
 data = urllib.urlencode(params)
@@ -35,7 +35,7 @@ for raw_lead_id in raw_lead_id_list:
 
 x=0
 
-vibe_api_key="b9c2b1fe746feec13382fda8b4505acc"
+vibe_api_key=""
 
 for lead_id in lead_id_list:
 	if len(email_id_list[x]) is 1:
